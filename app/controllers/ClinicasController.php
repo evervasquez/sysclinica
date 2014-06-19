@@ -35,4 +35,68 @@ class ClinicasController extends \BaseController {
         return $this->clinicaRepo->eliminar();
     }
 
+    public function addClinica()
+    {
+        $data = Input::all();
+
+        $rules = [
+            'descripcion' => 'required',
+            'direccion' => 'required',
+            'latitud' => 'required|numeric',
+            'longitud' => 'required|numeric'
+
+        ];
+
+        $validation = Validator::make($data, $rules);
+
+        if ($validation->passes()) {
+
+            $this->clinicaRepo->newclinica($data);
+
+            return \Redirect::to('/')
+                ->with('global', 'Felicitaciones, ya puedes iniciar sessión.');
+
+        }else{
+
+            return \Redirect::back()->withInput()->withErrors($validation->messages());
+        }
+    }
+
+    public function show()
+    {
+        $usuario = \Auth::user()->id;
+
+
+        $clinica = $this->clinicaRepo->find($usuario);
+
+
+        return View::make('clinicas/show')->with('clinicas',$clinica);
+    }
+
+    public function find()
+    {
+        $usuario = \Auth::user()->id;
+        return  $this->clinicaRepo->find($usuario);
+    }
+
+    public function updateClinica()
+    {
+        $data = Input::all();
+        $rules = [
+            'descripcion' => 'required|min:6',
+            'razon_social' => 'required|min:6',
+            'email' => 'email',
+            'telefono' => 'numeric',
+        ];
+
+        $validation = Validator::make($data, $rules);
+
+        if ($validation->passes()) {
+            $this->clinicaRepo->editar($data);
+            return Redirect::route('clinica')
+                ->with('global','La clinica ha sido actualizada.');
+        } else {
+            return \Redirect::back()->withInput()->withErrors($validation->messages());
+        }
+    }
 }

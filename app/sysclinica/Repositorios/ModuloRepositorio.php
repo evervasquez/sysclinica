@@ -16,6 +16,7 @@ class ModuloRepositorio
     public function getModulos()
     {
         if (\Request::ajax()) {
+
             $menupadre = Modulo::whereNull('deleted_at')
                 ->where('idpadre', '=', 1)
                 ->where('id', '<>', 1)
@@ -23,13 +24,18 @@ class ModuloRepositorio
 
             $cont = 0;
             $menu[] = '';
+
+            $idperfil = \Auth::user()->idperfil;
+
             foreach ($menupadre as $valor) {
                 $idpadre = $valor->id;
-                $submenu = \DB::select("SELECT m.descripcion,m.url,m.icono
+
+                $sql = "SELECT m.descripcion,m.url,m.icono
 	 							from modulos m inner join permisos p on m.id=p.idmodulo
-								where m.deleted_at IS NULL and p.idperfil=1 and m.idpadre='$idpadre'
-								");
-                //print_r($submenu);exit;
+								where m.deleted_at IS NULL and p.idperfil='$idperfil' and m.idpadre='$idpadre'";
+
+                $submenu = \DB::select($sql);
+
                 $menu[$cont] = array(
                     'descripcion' => $valor->descripcion,
                     'icono' => $valor->icono,

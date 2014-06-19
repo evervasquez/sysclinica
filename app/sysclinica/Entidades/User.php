@@ -9,12 +9,19 @@ class User extends \Eloquent implements UserInterface, RemindableInterface {
     protected $softDelete = true;
 
 	protected $table = 'users';
-
+    protected $fillable = array('username','email','password');
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
+
+    //encriptar password
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = \Hash::make($value);
+    }
+
 	protected $hidden = array('password','created_at','updated_at','deleted_at');
 
 	/**

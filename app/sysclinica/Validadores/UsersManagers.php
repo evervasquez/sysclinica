@@ -9,6 +9,6 @@
 namespace sysclinica\Validadores;
 
 
-class UsersManagers {
+class UsersManagers extends BaseManagers{
 
 } 

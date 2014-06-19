@@ -42,13 +42,25 @@ class UserRepositorio {
         );
     }
 
-    public function editar()
+    public function editar($data)
     {
-        $user = User::find(\Input::get('id'));
-        $user->nombres = \Input::get('nombres');
-        $user->apellidos = \Input::get('apellidos');
-        $user->email = \Input::get('email');
-        $user->username = \Input::get('username');
+        $user = User::find(\Auth::user()->id);
+        $user->nombres = $data['nombres'];
+        $user->apellidos = $data['apellidos'];
+        $user->email = $data['email'];
+        $user->username = \Auth::user()->username;
+
+        $user->telefono = $data['telefono'];
+        $user->web = $data['web'];
+        $user->ciudad = $data['ciudad'];
+        $user->distrito = $data['distrito'];
+        $user->direccion = $data['direccion'];
+
+        $user->facebook = $data['facebook'];
+        $user->linkedin = $data['linkedin'];
+        $user->google = $data['google'];
+        $user->twitter = $data['twitter'];
+
         if ($user->save()) {
             return \Response::json(array(
                 "Result" => 'OK'
@@ -84,6 +96,27 @@ class UserRepositorio {
         );
     }
 
+    public function newuser($data)
+    {
+
+        $users = new User();
+        $users->nombres = $data['username'];
+        $users->apellidos = $data['username'];
+        $users->email = $data['email'];
+        $users->email = $data['email'];
+        $users->username = $data['username'];
+        $users->password = $data['password'];
+        $users->save();
+
+        $idmax = \DB::table('users')->max('id');
+
+        $user = User::find($idmax);
+
+        if ($user->delete()) {
+            return $user;
+        }
+    }
+
     public function eliminar()
     {
         $user = User::find(\Input::get('id'));
@@ -92,5 +125,33 @@ class UserRepositorio {
                 "Result" => 'OK'
             ));
         }
+    }
+
+    public function show($id)
+    {
+        return User::find($id);
+    }
+
+    public function changePassword($data)
+    {
+        $user = User::find(\Auth::user()->id);
+
+        $old_password = $data['old_password'];
+        $password = $data['password'];
+
+        if(\Hash::check($old_password, $user->getAuthPassword()))
+        {
+            $user->password = $password;
+            return $user->save();
+        }
+    }
+
+    public function updateImagen($file)
+    {
+
+        $user = User::find(\Auth::user()->id);
+        $user->urlimagen = $file->getClientOriginalName();
+        return $user->save();
+
     }
 } 

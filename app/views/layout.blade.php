@@ -97,7 +97,7 @@
 
 <!-- begin SIDE NAV USER PANEL -->
 <li class="side-user hidden-xs">
-    {{HTML::image(Auth::user()->urlimagen,'Imagen no encontrada',array('class' => 'img-circle'))}}
+    {{HTML::image('assets/img/'.Auth::user()->urlimagen,'Imagen no encontrada',array('class' => 'img-circle'))}}
 
     <p class="welcome">
         <i class="fa fa-key"></i> Iniciado sesión como
@@ -127,11 +127,19 @@
 <div id="page-wrapper">
 
     <div class="page-content">
+        </br>
+        @if (Session::has('global'))
+        <span style="margin-bottom: 0px" class="help-block alert alert-success"><i class="fa fa-check "></i> {{ Session::get('global') }}</span>
+        @endif
+
+        @if (Session::has('error'))
+        <span style="margin-bottom: 0px" class="help-block alert alert-danger"><i class="fa fa-warning"></i>{{ Session::get('error') }}</span>
+        @endif
 
 @section('content')
 
         <!-- begin DASHBOARD CIRCLE TILES -->
-        <div class="row">
+        <div class="row" id="content">
             </br>
             <div class="col-lg-2 col-sm-6">
                 <div class="circle-tile">
@@ -269,7 +277,7 @@
 <!-- Logout Notification Box -->
 <div id="logout">
     <div class="logout-message">
-        {{HTML::image(Auth::user()->urlimagen,'Imagen no encontrada',array('class' => 'img-circle'))}}
+        {{HTML::image('assets/img/'.Auth::user()->urlimagen,'Imagen no encontrada',array('class' => 'img-circle'))}}
 
         <h3>
             <i class="fa fa-sign-out text-green"></i> A donde quiere ir?

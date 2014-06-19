@@ -1,18 +1,17 @@
 <?php
 /**
  * Created by PhpStorm.
- * clinica: ever
- * Date: 01/06/14
- * Time: 03:28 PM
+ * User: ever
+ * Date: 16/06/14
+ * Time: 11:15 PM
  */
 
 namespace sysclinica\Repositorios;
 
 
-use sysclinica\Entidades\Clinica;
-use sysclinica\Entidades\User;
+use sysclinica\Entidades\Servicio;
 
-class ClinicaRepositorio {
+class ServicioRepositorie {
 
     public function listar()
     {
@@ -43,24 +42,14 @@ class ClinicaRepositorio {
         );
     }
 
-    public function editar($data)
+    public function editar()
     {
-        $clinica = clinica::find($data['idclinica']);
+        $clinica = clinica::find(\Input::get('id'));
         $clinica->iduser = \Auth::user()->id;
-        $clinica->descripcion = $data['descripcion'];
-        $clinica->direccion = $data['direccion'];
-        $clinica->latitud = $data['latitud'];
-        $clinica->longitud = $data['longitud'];
-        $clinica->razon_social = $data['razon_social'];
-        $clinica->ciudad = $data['ciudad'];
-        $clinica->web = $data['web'];
-        $clinica->telefono = $data['telefono'];
-        $clinica->email = $data['email'];
-        $clinica->resumen = $data['resumen'];
-        $clinica->facebook = $data['facebook'];
-        $clinica->twitter = $data['twitter'];
-        $clinica->distrito = $data['distrito'];
-
+        $clinica->descripcion = \Input::get('descripcion');
+        $clinica->direccion = \Input::get('direccion');
+        $clinica->latitud = \Input::get('latitud');
+        $clinica->longitud = \Input::get('longitud');
         if ($clinica->save()) {
             return \Response::json(array(
                 "Result" => 'OK'
@@ -70,6 +59,7 @@ class ClinicaRepositorio {
 
     public function nuevo()
     {
+
         $clinicas = new clinica();
         $clinicas->iduser = \Auth::user()->id;
         $clinicas->descripcion = \Input::get('descripcion');
@@ -129,4 +119,11 @@ class ClinicaRepositorio {
         return Clinica::where('iduser','=',$usuario)
             ->get();
     }
+
+    public function getServicios()
+    {
+        return Servicio::whereNull('deleted_at')
+            ->get();
+    }
+
 } 

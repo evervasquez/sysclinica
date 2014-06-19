@@ -131,3 +131,7 @@
     line-height: 175px;
     color: rgba(255,255,255,.7);
 }
+.error_message{
+    color: red;
+    font-size: 12px;
+}
