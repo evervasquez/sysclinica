@@ -13,11 +13,21 @@ class DetalleServiciosController extends \BaseController
     public function create()
     {
         $data = Input::all();
+        if (isset($data['servicios'])) {
+            if ($this->detalleRepo->createDetalleServicio($data)) {
 
-        if ($this->detalleRepo->createDetalleServicio($data)) {
+                return \Redirect::route('clinica')
+                    ->with('global', 'Los servicios de la clinica han sido actualizados.');
+            }
+        } else {
             return \Redirect::route('clinica')
                 ->with('global', 'Los servicios de la clinica han sido actualizados.');
         }
 
+    }
+    public function removeService()
+    {
+        $iddetalleServicio = Input::get('id');
+        return $this->detalleRepo->removeDetalleServicio($iddetalleServicio);
     }
 }

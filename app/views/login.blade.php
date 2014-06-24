@@ -58,6 +58,7 @@
                 </div>
                 <div class="portlet-body">
                     {{ Form::open(array('url' => 'login','id' => 'formulario','action' => 'login','role'=>'form')) }}
+
                     <fieldset>
                         <div class="form-group">
                             <input class="form-control" autofocus placeholder="usuario" name="username" type="text">

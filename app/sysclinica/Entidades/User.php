@@ -85,4 +85,22 @@ class User extends \Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+    public function isAdmin(){
+
+        if(\Auth::user()->idperfil=="1"){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public function isUser()
+    {
+        if(\Auth::user()->idperfil=="2"){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

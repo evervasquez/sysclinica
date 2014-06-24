@@ -23,49 +23,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2910" selection-end="2996" vertical-scroll-proportion="1.6219313" vertical-offset="244" max-vertical-offset="1653">
+            <state line="44" column="23" selection-start="1571" selection-end="1571" vertical-scroll-proportion="-12.777778" vertical-offset="491" max-vertical-offset="1786">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/permisos/index.blade.php">
+      <file leaf-file-name="layout.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
+            <state line="238" column="45" selection-start="9004" selection-end="9004" vertical-scroll-proportion="0.39443535" vertical-offset="4281" max-vertical-offset="5928">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/perfils/index.blade.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/clinicas/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="58" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
+            <state line="233" column="84" selection-start="10220" selection-end="10220" vertical-scroll-proportion="-3.6296296" vertical-offset="4329" max-vertical-offset="6726">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/clinicas/index.blade.php">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1531" selection-end="1541" vertical-scroll-proportion="-18.88889" vertical-offset="573" max-vertical-offset="1197">
+            <state line="103" column="42" selection-start="3296" selection-end="3296" vertical-scroll-proportion="0.0" vertical-offset="1634" max-vertical-offset="3249">
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1403587014408" expanded="false" signature="48:62" placeholder="..." />
+                <marker date="1403587014408" expanded="false" signature="4929:4946" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layout.blade.php">
+      <file leaf-file-name="ClinicaRepositorio.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/ClinicaRepositorio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="0" selection-start="4496" selection-end="4515" vertical-scroll-proportion="-30.296297" vertical-offset="1804" max-vertical-offset="6289">
-              <folding />
+            <state line="49" column="41" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-6.3333335" vertical-offset="646" max-vertical-offset="3211">
+              <folding>
+                <marker date="1403587077440" expanded="true" signature="3997:4454" placeholder="SELECT clini..clinicas..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,15 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Entidades/Modulo.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_01_070806_create_perfils_table.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Entidades/Perfil.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Entidades/Permiso.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_01_071542_add_foreign_permisos.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_01_071017_create_permisos_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_01_072630_add_campos_users.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_01_080009_add_campo_imagen_user.php" />
         <option value="$PROJECT_DIR$/app/sysclinica/Entidades/Clinica.php" />
         <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
@@ -99,8 +93,6 @@
         <option value="$PROJECT_DIR$/app/views/modulos/index.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_04_115809_create_servicios_table.php" />
         <option value="$PROJECT_DIR$/app/sysclinica/Validadores/UsersManagers.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Validadores/BaseManagers.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Entidades/User.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_13_003552_add_prfil_users.php" />
         <option value="$PROJECT_DIR$/public/assets/css/pace.css" />
         <option value="$PROJECT_DIR$/app/lang/es/validation.php" />
@@ -108,28 +100,39 @@
         <option value="$PROJECT_DIR$/public/assets/css/demo.css" />
         <option value="$PROJECT_DIR$/app/views/add-clinica.php" />
         <option value="$PROJECT_DIR$/app/views/sign-up.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/add-clinica.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_15_225318_puliendo_users.php" />
-        <option value="$PROJECT_DIR$/app/views/login.blade.php" />
         <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/ModuloRepositorio.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/UserRepositorio.php" />
-        <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_16_210448_arreglando_clinicas.php" />
-        <option value="$PROJECT_DIR$/app/views/users/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_16_212602_arreglando_clinicas2.php" />
         <option value="$PROJECT_DIR$/app/sysclinica/Entidades/Servicio.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ClinicasController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_17_001242_arreglando_clinicas3.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/ClinicaRepositorio.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ServiciosController.php" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/ServicioRepositorie.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_06_17_003039_create_detalle_servicios_table.php" />
+        <option value="$PROJECT_DIR$/app/views/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Validadores/BaseManagers.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Validadores/UsersValidadores.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/UserRepositorio.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ServiciosController.php" />
         <option value="$PROJECT_DIR$/app/sysclinica/Entidades/DetalleServicio.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/DetalleServicioRepositorie.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/ServicioRepositorie.php" />
+        <option value="$PROJECT_DIR$/app/controllers/DetalleServiciosController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ErrorsController.php" />
+        <option value="$PROJECT_DIR$/app/views/error404.blade.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Entidades/User.php" />
+        <option value="$PROJECT_DIR$/app/filters.php" />
+        <option value="$PROJECT_DIR$/app/views/users/profile.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ClinicasController.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_23_232303_create_tipos_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_23_232543_add_foreign_tipo.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_06_23_232734_add_foreign_tipo2.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Entidades/Tipo.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/views/add-clinica.blade.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Validadores/ClinicaValidadores.php" />
         <option value="$PROJECT_DIR$/app/views/clinicas/show.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/DetalleServicioRepositorie.php" />
-        <option value="$PROJECT_DIR$/app/controllers/DetalleServiciosController.php" />
+        <option value="$PROJECT_DIR$/app/sysclinica/Repositorios/ClinicaRepositorio.php" />
         <option value="$PROJECT_DIR$/app/views/layout.blade.php" />
       </list>
     </option>
@@ -218,114 +221,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="permisos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="perfils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="emails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sysclinica" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clinicas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bscunsm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sistravent" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="l" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/sysclinica/Validadores" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/public/assets/less" />
       <recent name="$PROJECT_DIR$/public/assets/css" />
       <recent name="$PROJECT_DIR$/public/assets/js" />
-      <recent name="$PROJECT_DIR$/app/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/assets/bootstrap" />
@@ -375,14 +287,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2997694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21368179" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -414,183 +326,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/scripts/jqueryui/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="232" selection-end="261" vertical-scroll-proportion="-0.90180033" vertical-offset="684" max-vertical-offset="8664" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_04_115809_create_servicios_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="148" selection-end="148" vertical-scroll-proportion="0.09827586" vertical-offset="57" max-vertical-offset="779" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_01_110115_create_clinicas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="353" selection-end="353" vertical-scroll-proportion="0.42628205" vertical-offset="38" max-vertical-offset="1026" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/morris.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/messenger-theme-flat.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8892" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="44" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.410299" vertical-offset="684" max-vertical-offset="3762" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/es/validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="44" selection-start="5431" selection-end="5431" vertical-scroll-proportion="0.83870965" vertical-offset="1520" max-vertical-offset="2204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/es/reminders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="233" selection-end="470" vertical-scroll-proportion="0.42628205" vertical-offset="0" max-vertical-offset="624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Validadores/UsersManagers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="170" selection-end="170" vertical-scroll-proportion="0.24358974" vertical-offset="0" max-vertical-offset="624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Validadores/BaseManagers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="167" selection-end="167" vertical-scroll-proportion="0.24358974" vertical-offset="0" max-vertical-offset="624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/modulos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1306" selection-end="1316" vertical-scroll-proportion="0.8173077" vertical-offset="440" max-vertical-offset="1064" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-60.73511" vertical-offset="38749" max-vertical-offset="39387" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/pace.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="269" selection-end="269" vertical-scroll-proportion="0.4669739" vertical-offset="0" max-vertical-offset="651" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/plugins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.940092" vertical-offset="2565" max-vertical-offset="6745" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/messenger.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.1865203" vertical-offset="1395" max-vertical-offset="2033" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/preview.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="17" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.8248848" vertical-offset="2028" max-vertical-offset="2698" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="0" selection-end="1313" vertical-scroll-proportion="1.3255814" vertical-offset="0" max-vertical-offset="1045" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/add-clinica.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="106" selection-start="3770" selection-end="3778" vertical-scroll-proportion="0.502455" vertical-offset="1517" max-vertical-offset="2337" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ModulosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="350" selection-end="350" vertical-scroll-proportion="0.45673078" vertical-offset="0" max-vertical-offset="912" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_15_225318_puliendo_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="899" selection-end="899" vertical-scroll-proportion="0.90531564" vertical-offset="177" max-vertical-offset="950" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sign-up.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="100" selection-start="2669" selection-end="2741" vertical-scroll-proportion="2.096774" vertical-offset="95" max-vertical-offset="2109" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="35" selection-start="877" selection-end="892" vertical-scroll-proportion="-0.030448718" vertical-offset="779" max-vertical-offset="1767" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="94" selection-start="3156" selection-end="3156" vertical-scroll-proportion="1.1325696" vertical-offset="733" max-vertical-offset="2090" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_16_210448_arreglando_clinicas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="329" selection-end="329" vertical-scroll-proportion="-10.555555" vertical-offset="0" max-vertical-offset="798" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/bootstrap-multiselect.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="758" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/Clinica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="99" selection-end="203" vertical-scroll-proportion="0.12624584" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/Servicio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="70" selection-start="204" selection-end="204" vertical-scroll-proportion="0.1578073" vertical-offset="0" max-vertical-offset="602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/UserRepositorio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="14" selection-start="3393" selection-end="3399" vertical-scroll-proportion="-13.962963" vertical-offset="2017" max-vertical-offset="2983" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="4" selection-start="3038" selection-end="3637" vertical-scroll-proportion="-1.7037038" vertical-offset="2310" max-vertical-offset="3952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="293" column="28" selection-start="13253" selection-end="13322" vertical-scroll-proportion="-11.962963" vertical-offset="5244" max-vertical-offset="7201" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_17_001242_arreglando_clinicas3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="324" selection-end="324" vertical-scroll-proportion="-10.555555" vertical-offset="0" max-vertical-offset="684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/ClinicaRepositorio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="41" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.43189368" vertical-offset="652" max-vertical-offset="2489">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_01_071017_create_permisos_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="27" selection-start="323" selection-end="330" vertical-scroll-proportion="0.5241379" vertical-offset="0" max-vertical-offset="798" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_17_003039_create_detalle_servicios_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="62" selection-start="707" selection-end="707" vertical-scroll-proportion="0.44186047" vertical-offset="209" max-vertical-offset="893" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/Modulo.php">
@@ -598,107 +336,276 @@
         <state line="4" column="0" selection-start="98" selection-end="202" vertical-scroll-proportion="0.12624584" vertical-offset="0" max-vertical-offset="602" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/DetalleServicio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="70" selection-start="211" selection-end="211" vertical-scroll-proportion="0.1578073" vertical-offset="0" max-vertical-offset="602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="12" selection-start="3891" selection-end="3891" vertical-scroll-proportion="0.38311687" vertical-offset="2139" max-vertical-offset="2755">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/ServicioRepositorie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="3460" selection-end="3460" vertical-scroll-proportion="0.7790698" vertical-offset="1849" max-vertical-offset="2451">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ServiciosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="0.57852566" vertical-offset="0" max-vertical-offset="624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/DetalleServicioRepositorie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.72596157" vertical-offset="3" max-vertical-offset="627">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/DetalleServiciosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="1" selection-start="593" selection-end="593" vertical-scroll-proportion="0.6698718" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_16_212602_arreglando_clinicas2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="8" selection-start="231" selection-end="344" vertical-scroll-proportion="0.2996795" vertical-offset="79" max-vertical-offset="703" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/clinicas/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/permisos/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="69" selection-start="12009" selection-end="12026" vertical-scroll-proportion="0.5625" vertical-offset="4570" max-vertical-offset="5510">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PermisosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="9" selection-end="10" vertical-scroll-proportion="0.06440678" vertical-offset="0" max-vertical-offset="1729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PerfilsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="9" selection-end="10" vertical-scroll-proportion="0.06440678" vertical-offset="0" max-vertical-offset="1729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ModulosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="23" selection-start="414" selection-end="415" vertical-scroll-proportion="0.320339" vertical-offset="191" max-vertical-offset="912" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/ModuloRepositorio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="8" selection-start="4075" selection-end="4200" vertical-scroll-proportion="0.62684125" vertical-offset="2239" max-vertical-offset="2850">
+        <state line="74" column="32" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.37315875" vertical-offset="1083" max-vertical-offset="2850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/perfils/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="58" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/servicios/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/detalle_servicios/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clinicas/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="1531" selection-end="1541" vertical-scroll-proportion="1.1826923" vertical-offset="345" max-vertical-offset="1197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="4" selection-start="221" selection-end="275" vertical-scroll-proportion="0.27403846" vertical-offset="0" max-vertical-offset="912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3445513" vertical-offset="839" max-vertical-offset="1463" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/UserRepositorio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="26" selection-start="4030" selection-end="4030" vertical-scroll-proportion="0.90865386" vertical-offset="2359" max-vertical-offset="3078" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Validadores/UsersValidadores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="488" selection-end="488" vertical-scroll-proportion="-11.962963" vertical-offset="0" max-vertical-offset="494" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Validadores/BaseManagers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="-0.24839744" vertical-offset="193" max-vertical-offset="1159" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/DetalleServicio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="33" selection-start="141" selection-end="141" vertical-scroll-proportion="0.1578073" vertical-offset="0" max-vertical-offset="602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/DetalleServicioRepositorie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="33" selection-start="845" selection-end="845" vertical-scroll-proportion="0.6650641" vertical-offset="193" max-vertical-offset="817" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/DetalleServiciosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="46" selection-start="899" selection-end="899" vertical-scroll-proportion="0.75641024" vertical-offset="79" max-vertical-offset="722" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ServiciosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="30" selection-start="625" selection-end="625" vertical-scroll-proportion="0.7307692" vertical-offset="0" max-vertical-offset="798" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="4325" selection-end="4376" vertical-scroll-proportion="0.3429487" vertical-offset="2085" max-vertical-offset="3762" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ErrorsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="13" selection-end="29" vertical-scroll-proportion="0.060897436" vertical-offset="0" max-vertical-offset="624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/error404.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="246" selection-start="1193" selection-end="1193" vertical-scroll-proportion="-9.259259" vertical-offset="263" max-vertical-offset="874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="38" selection-start="1839" selection-end="1839" vertical-scroll-proportion="-14.962963" vertical-offset="1458" max-vertical-offset="2109">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="56" selection-start="1844" selection-end="1844" vertical-scroll-proportion="-16.88889" vertical-offset="741" max-vertical-offset="1729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1303" selection-end="1313" vertical-scroll-proportion="-18.88889" vertical-offset="421" max-vertical-offset="1045" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="115" selection-start="15718" selection-end="15718" vertical-scroll-proportion="5.5090017" vertical-offset="2961" max-vertical-offset="7201" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="20" selection-start="3034" selection-end="3424" vertical-scroll-proportion="0.9819967" vertical-offset="825" max-vertical-offset="2109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/pace.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/preview.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/plugins.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.1621623" vertical-offset="3876" max-vertical-offset="6745" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-62.939934" vertical-offset="38771" max-vertical-offset="39387" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="17" selection-start="2084" selection-end="2084" vertical-scroll-proportion="4.0779014" vertical-offset="0" max-vertical-offset="2698" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/ServicioRepositorie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="30" selection-start="3608" selection-end="3608" vertical-scroll-proportion="0.61290324" vertical-offset="2052" max-vertical-offset="2641" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_23_232734_add_foreign_tipo2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="66" selection-start="355" selection-end="355" vertical-scroll-proportion="0.43189368" vertical-offset="25" max-vertical-offset="741" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_23_232543_add_foreign_tipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="41" selection-start="549" selection-end="549" vertical-scroll-proportion="0.8525641" vertical-offset="0" max-vertical-offset="741" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_06_23_232303_create_tipos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="5" selection-start="524" selection-end="524" vertical-scroll-proportion="0.82211536" vertical-offset="57" max-vertical-offset="779" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/Clinica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="98" selection-end="203" vertical-scroll-proportion="0.09134615" vertical-offset="0" max-vertical-offset="624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Entidades/Tipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="95" selection-end="95" vertical-scroll-proportion="0.09134615" vertical-offset="0" max-vertical-offset="624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sign-up.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="100" selection-start="2669" selection-end="2741" vertical-scroll-proportion="1.4631752" vertical-offset="436" max-vertical-offset="2109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="1" selection-start="5475" selection-end="5475" vertical-scroll-proportion="0.93780684" vertical-offset="3246" max-vertical-offset="3933">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Validadores/ClinicaValidadores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.6394231" vertical-offset="0" max-vertical-offset="624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/add-clinica.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="42" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.37806875" vertical-offset="1213" max-vertical-offset="2584">
           <folding>
-            <marker date="1402962840735" expanded="true" signature="-1:-1" placeholder="SELECT m.des..modulos..." />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ClinicasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="8" selection-start="1001" selection-end="1084" vertical-scroll-proportion="1.4919872" vertical-offset="0" max-vertical-offset="2033">
+        <state line="43" column="0" selection-start="856" selection-end="856" vertical-scroll-proportion="-1.0400641" vertical-offset="1447" max-vertical-offset="2071">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/clinicas/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="0" selection-start="4496" selection-end="4515" vertical-scroll-proportion="-30.296297" vertical-offset="1804" max-vertical-offset="6289">
+        <state line="233" column="84" selection-start="10220" selection-end="10220" vertical-scroll-proportion="-3.6296296" vertical-offset="4329" max-vertical-offset="6726">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/permisos/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/perfils/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="58" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/clinicas/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1531" selection-end="1541" vertical-scroll-proportion="-18.88889" vertical-offset="573" max-vertical-offset="1197">
+        <state line="103" column="42" selection-start="3296" selection-end="3296" vertical-scroll-proportion="0.0" vertical-offset="1634" max-vertical-offset="3249">
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1403587014408" expanded="false" signature="48:62" placeholder="..." />
+            <marker date="1403587014408" expanded="false" signature="4929:4946" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sysclinica/Repositorios/ClinicaRepositorio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="41" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-6.3333335" vertical-offset="646" max-vertical-offset="3211">
+          <folding>
+            <marker date="1403587077440" expanded="true" signature="3997:4454" placeholder="SELECT clini..clinicas..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2910" selection-end="2996" vertical-scroll-proportion="1.6219313" vertical-offset="244" max-vertical-offset="1653">
+        <state line="44" column="23" selection-start="1571" selection-end="1571" vertical-scroll-proportion="-12.777778" vertical-offset="491" max-vertical-offset="1786">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="45" selection-start="9004" selection-end="9004" vertical-scroll-proportion="0.39443535" vertical-offset="4281" max-vertical-offset="5928">
           <folding />
         </state>
       </provider>

@@ -11,17 +11,13 @@ namespace sysclinica\Repositorios;
 
 use sysclinica\Entidades\DetalleServicio;
 
-class DetalleServicioRepositorie {
+class DetalleServicioRepositorie
+{
 
-    public function getServiciosClinica()
-    {
-
-    }
 
     public function createDetalleServicio($data)
     {
-        for($i=0; $i < count($data['servicios']); $i++)
-        {
+        for ($i = 0; $i < count($data['servicios']); $i++) {
             $detalle = new DetalleServicio();
             $detalle->idclinica = $data['idclinicaServicio'];
             $detalle->idservicio = $data['servicios'][$i];
@@ -30,4 +26,18 @@ class DetalleServicioRepositorie {
 
         return true;
     }
+
+    public function removeDetalleServicio($id)
+    {
+        if (DetalleServicio::find($id)->delete()) {
+            return \Response::json(array(
+                "validation" => 1
+            ));
+        }else{
+            return \Response::json(array(
+                "validation" => 0
+            ));
+        }
+    }
+
 } 

@@ -1,6 +1,7 @@
 <?php
 use sysclinica\Repositorios\UserRepositorio;
 use sysclinica\Entidades\User;
+use sysclinica\Entidades\Tipo;
 
 class UsersController extends \BaseController
 {
@@ -86,10 +87,8 @@ class UsersController extends \BaseController
         $validation = Validator::make($data, $rules);
 
         if ($validation->passes()) {
-            $user = $this->userRepo->newuser($data);
-
+            $user = $this->userRepo->nuevoUser($data);
             Session::push('iduser', $user->id);
-
             return \Redirect::route('paso2');
         } else {
 
@@ -104,7 +103,8 @@ class UsersController extends \BaseController
 
     public function addClinica()
     {
-        return View::make('add-clinica');
+        $tipos = Tipo::whereNull('deleted_at')->get();
+        return View::make('add-clinica')->with('datos',$tipos);
     }
 
     public function profile()

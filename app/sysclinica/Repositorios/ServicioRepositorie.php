@@ -11,7 +11,8 @@ namespace sysclinica\Repositorios;
 
 use sysclinica\Entidades\Servicio;
 
-class ServicioRepositorie {
+class ServicioRepositorie
+{
 
     public function listar()
     {
@@ -104,6 +105,7 @@ class ServicioRepositorie {
         $user->restore();
         $user->save();
     }
+
     public function eliminar()
     {
         $clinica = Clinica::find(\Input::get('id'));
@@ -116,14 +118,17 @@ class ServicioRepositorie {
 
     public function find($usuario)
     {
-        return Clinica::where('iduser','=',$usuario)
+        return Clinica::where('iduser', '=', $usuario)
             ->get();
     }
 
-    public function getServicios()
+    public function getServicios($idclinica)
     {
-        return Servicio::whereNull('deleted_at')
-            ->get();
+        $sql = 'SELECT id as xid, descripcion ,(SELECT id FROM detalle_servicios WHERE idservicio=xid and idclinica='.$idclinica['idclinica'].' and deleted_at IS NULL) as iddetalle
+                FROM servicios
+                WHERE deleted_at IS NULL';
+
+        return \DB::select($sql);
     }
 
 } 

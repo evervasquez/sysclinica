@@ -1,0 +1,1 @@
+/var/www/html/sysclinica/app/views/tipos/create.blade.php

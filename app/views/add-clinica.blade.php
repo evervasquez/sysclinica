@@ -60,7 +60,7 @@
     <div class="portlet portlet-green">
         <div class="portlet-heading login-heading">
             <div class="portlet-title">
-                <h4><i class="fa fa-plus-square"></i><strong> Regístrar Clinica</strong>
+                <h4><i class="fa fa-plus-square"></i><strong> Regístrar Negocio</strong>
                 </h4>
             </div>
             <div class="clearfix"></div>
@@ -70,10 +70,23 @@
             <div class="portlet-body">
                 {{ Form::open(array('route' => 'addclinica','id' => 'formulario','role'=>'form')) }}
                 <fieldset>
-                    <label>Nombre de clinica</label>
+                    <label>Tipo de Negocio</label>
 
                     <div class="form-group">
-                        <input class="form-control" autofocus placeholder="nombre de clinica" name="descripcion"
+
+                        <select autofocus class="form-control" name="tipo">
+                            @for ($i = 0; $i < count($datos); $i++)
+                            <option value="{{ $datos[$i]->id }}">{{ $datos[$i]->descripcion }}</option>
+                            @endfor
+                        </select>
+
+                        {{ $errors->first('tipo','<p class="error_message">:message</p>') }}
+                    </div>
+
+                    <label>Nombre del Negocio</label>
+
+                    <div class="form-group">
+                        <input class="form-control" placeholder="nombre de clinica" name="descripcion"
                                type="text">
                         {{ $errors->first('descripcion','<p class="error_message">:message</p>') }}
                     </div>
@@ -107,7 +120,7 @@
             </div>
             <div class="col-md-8" style="padding-left: 0px">
 
-                <div id="map_canvas" class="table-responsive" style="width: 750dpi;height: 391px">
+                <div id="map_canvas" class="table-responsive" style="width: 750dpi;height: 465px">
 
                 </div>
             </div>

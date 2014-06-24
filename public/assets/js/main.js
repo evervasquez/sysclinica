@@ -15,7 +15,7 @@ var cargaMenu = function () {
         },
         success: function (data) {
             var menus = generaMenu(data);
-            $("."+menu).append(menus);
+            $("." + menu).append(menus);
         }
     })
 }
@@ -33,25 +33,24 @@ var generaMenu = function (menu) {
         //capa del menu padre
         var capaPadre;
         var subLista;
-        if(menu[i].enlaces.length > 0){
+        if (menu[i].enlaces.length > 0) {
 
-        capaPadre = '<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#'+menu[i].descripcion+'">' +
-            '<i class="fa '+menu[i].icono+'"></i>' + menu[i].descripcion + '<i class="fa fa-caret-down"></i></a>';
+            capaPadre = '<a href="javascript:;" data-parent="#side" data-toggle="collapse" class="accordion-toggle" data-target="#' + menu[i].descripcion + '">' +
+                '<i class="fa ' + menu[i].icono + '"></i>' + menu[i].descripcion + '<i class="fa fa-caret-down"></i></a>';
             capaMenu += capaPadre;
 
-            subLista = '<ul class="collapse nav" id="'+menu[i].descripcion+'">';
+            subLista = '<ul class="collapse nav" id="' + menu[i].descripcion + '">';
         }
 
 
-
-        for (var j = 0; j < menu[i].enlaces.length; j++)
-         {
+        for (var j = 0; j < menu[i].enlaces.length; j++) {
             var subElemento = '<li>';
             subLista += subElemento;
-            var subenlace = '<a href="' + menu[i].enlaces[j].url + '"><i class="fa '+menu[i].enlaces[j].icono+'"></i>' + menu[i].enlaces[j].descripcion + '</a>';
+            var subenlace = '<a href="' + menu[i].enlaces[j].url + '"><i class="fa ' + menu[i].enlaces[j].icono + '"></i>' + menu[i].enlaces[j].descripcion + '</a>';
             subLista += subenlace;
             subLista += '</li>';
-        };
+        }
+        ;
 
         capaMenu += subLista;
         capaMenu += '</ul>';
@@ -63,7 +62,7 @@ var generaMenu = function (menu) {
     return capaMenu;
 };
 
-var verPerfil = function(){
+var verPerfil = function () {
     var content = "#content";
     $.ajax({
         type: 'GET',
@@ -88,8 +87,7 @@ var verPerfil = function(){
     })
 }
 
-var getClinicas = function()
-{
+var getClinicas = function () {
     var content = "#content";
     $.ajax({
         type: 'GET',
@@ -100,8 +98,10 @@ var getClinicas = function()
         success: function (data) {
             $("#idclinica").val(data[0]['id']);
             $("#descripcion").val(data[0]['descripcion']);
+            $("#resumen").val(data[0]['resumen']);
             $("#latitud").val(data[0]['latitud']);
             $("#longitud").val(data[0]['longitud']);
+            $("#tipo").val(data[0]['idtipo']);
             $("#razon_social").val(data[0]['razon_social']);
             $("#telefono").val(data[0]['telefono']);
             $("#direccion").val(data[0]['direccion']);
@@ -111,25 +111,32 @@ var getClinicas = function()
             $("#web").val(data[0]['web']);
             $("#facebook").val(data[0]['facebook']);
             $("#twitter").val(data[0]['twitter']);
+
+            $("#idclinicaServicio").val(data[0]['id']);
         }
     });
 
+}
+
+var getService = function () {
+    var idclinica = $("#idclinicaServicio").val();
     $.ajax({
         type: 'GET',
         url: 'servicio/getServicios',
+        data: 'idclinica=' + idclinica,
         beforeSend: function () {
             $('#servicios').html(cargando);
         },
         success: function (data) {
-            var html="";
+            var html = "";
+            for (var i = 0; i < data.length; i++) {
+                if (data[i]['iddetalle'] != null) {
+                    html += "<label class='checkbox'><input checked  onclick='removeCheck(" + data[i]['iddetalle'] + ")' type='checkbox' id='servicios_" + data[i]['xid'] + "' value='" + data[i]['id'] + "' />" + data[i]['descripcion'] + "</label>";
+                } else {
+                    html += "<label class='checkbox'><input type='checkbox' id='servicios_" + data[i]['xid'] + "' value='" + data[i]['xid'] + "' name='servicios[]' />" + data[i]['descripcion'] + "</label>";
+                }
 
-            $("#idclinicaServicio").val($("#idclinica").val());
-
-            for(var i=0; i < data.length; i++)
-            {
-                html += "<label class='checkbox'><input type='checkbox' value='"+data[i]['id']+"' name='servicios[]' />"+data[i]['descripcion']+"</label>";
             }
-
             html += '<button type="submit" class="btn btn-primary">Actualizar</button>' +
                 '<button style="margin-left: 10px" class="btn btn-red">Cancelar</button>';
 
@@ -137,3 +144,22 @@ var getClinicas = function()
         }
     })
 }
+
+var removeCheck = function (iddetalleServicio) {
+    $.ajax({
+        type: 'POST',
+        url: 'servicio/removeService',
+        data: 'id=' + iddetalleServicio,
+        beforeSend: function () {
+            $('#servicios').html(cargando);
+        },
+        success: function (data) {
+            if(data.validation == 1){
+            getService();
+            }else{
+
+            }
+        }
+    })
+}
+

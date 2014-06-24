@@ -96,7 +96,7 @@ class UserRepositorio {
         );
     }
 
-    public function newuser($data)
+    public function nuevoUser($data)
     {
 
         $users = new User();
@@ -153,5 +153,10 @@ class UserRepositorio {
         $user->urlimagen = $file->getClientOriginalName();
         return $user->save();
 
+    }
+
+    public function newUser()
+    {
+        return new User();
     }
 } 

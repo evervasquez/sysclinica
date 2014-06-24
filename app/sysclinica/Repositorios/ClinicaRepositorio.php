@@ -47,6 +47,7 @@ class ClinicaRepositorio {
     {
         $clinica = clinica::find($data['idclinica']);
         $clinica->iduser = \Auth::user()->id;
+        $clinica->idtipo = $data['tipo'];
         $clinica->descripcion = $data['descripcion'];
         $clinica->direccion = $data['direccion'];
         $clinica->latitud = $data['latitud'];
@@ -98,12 +99,13 @@ class ClinicaRepositorio {
         );
     }
 
-    public function newclinica($data)
+    public function nuevaClinica($data)
     {
         $ususario = \Session::get('iduser');
 
         $clinicas = new clinica();
         $clinicas->iduser = $ususario[0];
+        $clinicas->idtipo = $data['tipo'];
         $clinicas->descripcion = $data['descripcion'];
         $clinicas->direccion = $data['direccion'];
         $clinicas->latitud = $data['latitud'];
@@ -114,6 +116,7 @@ class ClinicaRepositorio {
         $user->restore();
         $user->save();
     }
+
     public function eliminar()
     {
         $clinica = Clinica::find(\Input::get('id'));
@@ -128,5 +131,40 @@ class ClinicaRepositorio {
     {
         return Clinica::where('iduser','=',$usuario)
             ->get();
+    }
+
+    public function newClinica()
+    {
+        return new Clinica();
+    }
+
+    public function getClinicasMaps()
+    {
+        $sql = 'SELECT clinicas.descripcion, clinicas.direccion, clinicas.latitud, clinicas.longitud, clinicas.ciudad, clinicas.email,
+                clinicas.facebook,clinicas.twitter,clinicas.distrito,clinicas.web,users.apellidos, users.urlimagen,users.nombres,
+                tipos.descripcion as tipo, tipos.icono
+                FROM clinicas
+                INNER JOIN users ON users.id = clinicas.iduser
+                INNER JOIN tipos ON clinicas.idtipo=tipos.id';
+
+        return \DB::select($sql);
+    }
+
+    public function androidClinicas()
+    {
+
+        $response = \DB::table('clinicas')
+                    ->join('users','clinicas.iduser','=','users.id')
+            ->select('clinicas.id','clinicas.descripcion','clinicas.direccion',
+                'clinicas.latitud','clinicas.longitud','clinicas.ciudad','clinicas.distrito','clinicas.razon_social','clinicas.telefono','clinicas.resumen','clinicas.facebook','clinicas.twitter','clinicas.web',
+                'users.nombres','users.apellidos')
+            ->get();
+
+        return \Response::json(
+            array(
+                'android' => $response
+            )
+        );
+
     }
 } 

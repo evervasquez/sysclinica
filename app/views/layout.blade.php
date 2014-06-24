@@ -137,127 +137,108 @@
         @endif
 
 @section('content')
+        <script type="text/javascript">
 
+            function initialize() {
+                var mapa = new google.maps.Map(document.getElementById("map_canvas"),
+                    {
+                        center: new google.maps.LatLng(-6.489087879805055, -76.3608169555664),
+                        zoom: 14,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    });
+                cargarMarcadores(mapa);
+            }
+
+
+            //funcion para cargar los marcadores
+            function cargarMarcadores(mapa) {
+                var marcadores = [];
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'getClinicasMaps',
+                    success: function (clinicas) {
+                        //console.log(clinicas.length);
+
+                        for (var i=0 ; i < clinicas.length; i++ ) {
+
+                            //console.log(clinicas[i]['descripcion']);
+
+                            var infowindow = null;
+
+
+                            var coordenadas = new google.maps.LatLng(clinicas[i]['latitud'], clinicas[i]['longitud']);
+                            var icono = 'http://sysclinica.dev/assets/img/'+clinicas[i]['icono'];
+                            //console.log(icono);
+                            var marcador = new google.maps.Marker({
+                                position: coordenadas,
+                                map: mapa,
+                                icon: icono,
+                                title: clinicas[i]['descripcion']});
+
+                            marcador.content =
+                                '<div class="container-fluid">' +
+                                    '<div class="row">' +
+                                    '<div class="col-md-12">' +
+                                    '<label>'+clinicas[i]['tipo']+' '+clinicas[i]['descripcion']+'</label>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="row">' +
+                                    '<div class="col-md-4">' +
+                                    '<img class="img-circle" src="http://sysclinica.dev/assets/img/' + clinicas[i]['urlimagen']+ '?sz=80" style="">' +
+                                    '</div>' +
+                                    '<div class="col-md-8">' +
+                                    '<label>Direccion de :</label> ' + clinicas[i]['direccion'] + '</br>' +
+                                    '<label>Ciudad :</label> ' + clinicas[i]['ciudad']+ '</br>' +
+                                    '<label>Distrito :</label> ' + clinicas[i]['distrito']+ '</br>' +
+                                    '<label>Contacto :</label> ' + clinicas[i]['nombres']+ '</br>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>';
+
+                            //agregamos al array
+                            marcadores.push(marcador);
+
+                            //esto es para editar
+                            //ids.push(datosmarker.id_ubicaciones);
+
+                            //llenamos el contenido
+                            infowindow = new google.maps.InfoWindow();
+
+                            google.maps.event.addListener(marcador, 'click', function() {
+                                infowindow.setContent(this.content);
+                                infowindow.open(mapa, this);
+                            });
+                        }
+                    }
+                })
+
+                /*$.get('getClinicasMap', 'id=0',
+                    function(response) {
+                       var datos = $.parseJSON(response);
+                        var datosmarker;
+
+                    });*/
+            }
+
+            function loadScript() {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCpj_yy86awDeBynQJqZrgJCgxbf_BikVE&sensor=false&callback=initialize";
+                document.body.appendChild(script);
+            }
+            window.onload = loadScript;
+        </script>
+        <style type="text/css">
+            #map_canvas{
+                padding-left: 0px;
+            }
+        </style>
         <!-- begin DASHBOARD CIRCLE TILES -->
         <div class="row" id="content">
-            </br>
-            <div class="col-lg-2 col-sm-6">
-                <div class="circle-tile">
-                    <a href="#">
-                        <div class="circle-tile-heading dark-blue">
-                            <i class="fa fa-users fa-fw fa-3x"></i>
-                        </div>
-                    </a>
+            <h1>Nuestros Negocios Registrados</h1>
+            <div id="map_canvas" class="table-responsive" style="width: 750dpi;height: 500px">
 
-                    <div class="circle-tile-content dark-blue">
-                        <div class="circle-tile-description text-faded">
-                            Users
-                        </div>
-                        <div class="circle-tile-number text-faded">
-                            265
-                            <span id="sparklineA"></span>
-                        </div>
-                        <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-                <div class="circle-tile">
-                    <a href="#">
-                        <div class="circle-tile-heading green">
-                            <i class="fa fa-money fa-fw fa-3x"></i>
-                        </div>
-                    </a>
-
-                    <div class="circle-tile-content green">
-                        <div class="circle-tile-description text-faded">
-                            Revenue
-                        </div>
-                        <div class="circle-tile-number text-faded">
-                            $32,384
-                        </div>
-                        <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-                <div class="circle-tile">
-                    <a href="#">
-                        <div class="circle-tile-heading orange">
-                            <i class="fa fa-bell fa-fw fa-3x"></i>
-                        </div>
-                    </a>
-
-                    <div class="circle-tile-content orange">
-                        <div class="circle-tile-description text-faded">
-                            Alerts
-                        </div>
-                        <div class="circle-tile-number text-faded">
-                            9 New
-                        </div>
-                        <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-                <div class="circle-tile">
-                    <a href="#">
-                        <div class="circle-tile-heading blue">
-                            <i class="fa fa-tasks fa-fw fa-3x"></i>
-                        </div>
-                    </a>
-
-                    <div class="circle-tile-content blue">
-                        <div class="circle-tile-description text-faded">
-                            Tasks
-                        </div>
-                        <div class="circle-tile-number text-faded">
-                            10
-                            <span id="sparklineB"></span>
-                        </div>
-                        <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-                <div class="circle-tile">
-                    <a href="#">
-                        <div class="circle-tile-heading red">
-                            <i class="fa fa-shopping-cart fa-fw fa-3x"></i>
-                        </div>
-                    </a>
-
-                    <div class="circle-tile-content red">
-                        <div class="circle-tile-description text-faded">
-                            Orders
-                        </div>
-                        <div class="circle-tile-number text-faded">
-                            24
-                            <span id="sparklineC"></span>
-                        </div>
-                        <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-sm-6">
-                <div class="circle-tile">
-                    <a href="#">
-                        <div class="circle-tile-heading purple">
-                            <i class="fa fa-comments fa-fw fa-3x"></i>
-                        </div>
-                    </a>
-
-                    <div class="circle-tile-content purple">
-                        <div class="circle-tile-description text-faded">
-                            Mentions
-                        </div>
-                        <div class="circle-tile-number text-faded">
-                            96
-                            <span id="sparklineD"></span>
-                        </div>
-                        <a href="#" class="circle-tile-footer">More Info <i class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- end DASHBOARD CIRCLE TILES -->

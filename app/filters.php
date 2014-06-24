@@ -60,6 +60,20 @@ Route::filter('guest', function()
 	if (Auth::check()) return Redirect::to('/');
 });
 
+Route::filter('admin', function($route, $request)
+{
+    if ( ! Auth::user()->isAdmin()) {
+        return Response::view('error404', array(), 404);
+    }
+});
+
+Route::filter('user', function($route, $request)
+{
+    if ( Auth::user()->isUser()) {
+        return Response::view('error404', array(), 404);
+    }
+});
+
 /*
 |--------------------------------------------------------------------------
 | CSRF Protection Filter

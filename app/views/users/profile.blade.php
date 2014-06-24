@@ -331,7 +331,7 @@
                             <label>Elija una nueva Imagen</label>
                             <input type="file" name="imagen" id="imagen" />
 
-                            <p class="help-block"><i class="fa fa-warning"></i> La imagen no debe ser mayor a  500x500
+                            <p class="help-block"><i class="fa fa-warning"></i> La imagen no debe ser mayor a  266x400
                                 pixels. Formatos Sportados: JPG, GIF, PNG</p>
                             <button type="submit" class="btn btn-default">Actualizar Imágen de Perfil</button>
                             <button class="btn btn-green">Cancelar</button>
