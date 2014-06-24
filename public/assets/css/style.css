@@ -2066,3 +2066,8 @@ input[type="checkbox"]:checked::after,
         margin-left: 0;
     }
 }
+
+.img-circle{
+    width: 160px;
+    height: 160px;
+}

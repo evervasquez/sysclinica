@@ -98,7 +98,6 @@
 <!-- begin SIDE NAV USER PANEL -->
 <li class="side-user hidden-xs">
     {{HTML::image('assets/img/'.Auth::user()->urlimagen,'Imagen no encontrada',array('class' => 'img-circle'))}}
-
     <p class="welcome">
         <i class="fa fa-key"></i> Iniciado sesión como
     </p>
