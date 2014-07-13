@@ -87,3 +87,4 @@ App::missing(function($exception)
 //android
 //Route::resource('listClinicas', 'ClinicasController@getIndex');
 Route::get('android/listclinicas',['as' => 'listclinicas', 'uses' => 'ClinicasController@androidClinicas']);
+Route::get('android/searchClinicas',['as' => 'searchClinicas', 'uses' => 'ClinicasController@searchClinicas']);

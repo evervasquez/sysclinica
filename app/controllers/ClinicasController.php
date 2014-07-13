@@ -102,4 +102,10 @@ class ClinicasController extends \BaseController
     {
         return $this->clinicaRepo->androidClinicas();
     }
+
+    public function searchClinicas()
+    {
+        $cadena = Input::get('cadena');
+        return $this->clinicaRepo->androidSearchClinicas($cadena);
+    }
 }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 21-06-2014 a las 18:46:55
+-- Tiempo de generación: 24-06-2014 a las 00:43:03
 -- Versión del servidor: 5.5.37
 -- Versión de PHP: 5.5.12-2+deb.sury.org~precise+1
 
@@ -45,20 +45,23 @@ CREATE TABLE IF NOT EXISTS `clinicas` (
   `twitter` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `distrito` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `web` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `idtipo` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `clinicas_iduser_foreign` (`iduser`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+  KEY `clinicas_iduser_foreign` (`iduser`),
+  KEY `clinicas_idtipo_foreign` (`idtipo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
 --
 -- Volcado de datos para la tabla `clinicas`
 --
 
-INSERT INTO `clinicas` (`id`, `iduser`, `descripcion`, `direccion`, `latitud`, `longitud`, `created_at`, `updated_at`, `deleted_at`, `razon_social`, `telefono`, `ciudad`, `email`, `resumen`, `facebook`, `twitter`, `distrito`, `web`) VALUES
-(1, 1, 'clinica 1', 'av. america', '6565666', '56656', '2014-06-01 20:35:39', '2014-06-04 16:03:53', '2014-06-04 16:03:53', '', '', '', '', '', '', '', '', ''),
-(7, 25, 'Clinica del oriente numero 2', 'av. america #345', '-6.478203804706209', '-76.3920789398253', '2014-06-16 02:52:50', '2014-06-16 02:52:50', NULL, '', '', '', '', '', '', '', '', ''),
-(8, 26, 'Clinica  del Oriente', 'av. america numero 2', '-6.485959167438448', '-76.36891727332456', '2014-06-16 22:37:46', '2014-06-21 20:46:36', NULL, 'Clinica del Oriente', '9452841451', 'Tarapoto', 'pever@unsm.edu.pe', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Etiam placerat nunc ut tellus tristique, non posuere neque iaculis.', 'http://facebook.com/clinica1', '', 'Morales', 'http://sonico999.com.pe'),
-(9, 26, '88', '//', '85', '55', '2014-06-21 18:56:53', '2014-06-21 18:57:03', '2014-06-21 18:57:03', '', '', '', '', '', '', '', '', ''),
-(10, 27, 'clinica2', 'av. america numero 2', '-6.491356349194494', '-76.35330498196709', '2014-06-21 22:15:54', '2014-06-21 22:25:46', NULL, '', '', 'Tarapoto', '', 'szddddddddddddddddddddzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\r\nzzzzzzzzz<bc<vndbvcm,zxbcm,zxc<bm,bz<mcbz<mcbz<mcbmz<dbcm<bzdmc<bzmcbz<zx,c<b ,zxmbc,zxbnc,zc<n,zxmcnzxcxzc', 'http://facebook.com/clinica1', '', 'Cacatachi', '');
+INSERT INTO `clinicas` (`id`, `iduser`, `descripcion`, `direccion`, `latitud`, `longitud`, `created_at`, `updated_at`, `deleted_at`, `razon_social`, `telefono`, `ciudad`, `email`, `resumen`, `facebook`, `twitter`, `distrito`, `web`, `idtipo`) VALUES
+(1, 1, 'clinica 1', 'av. america', '-6.478203804706789', '-76.36891727332456', '2014-06-01 20:35:39', '2014-06-04 16:03:53', '2014-06-04 16:03:53', '', '', '', '', '', '', '', '', '', 1),
+(7, 25, 'Clinica del oriente numero 2', 'av. america #345', '-6.478203804706209', '-76.3920789398253', '2014-06-16 02:52:50', '2014-06-16 02:52:50', NULL, '', '', '', '', '', '', '', '', '', 1),
+(8, 26, 'Clinica  del Oriente', 'av. america numero 2', '-6.485959167438448', '-76.36891727332456', '2014-06-16 22:37:46', '2014-06-21 20:46:36', NULL, 'Clinica del Oriente', '9452841451', 'Tarapoto', 'pever@unsm.edu.pe', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Etiam placerat nunc ut tellus tristique, non posuere neque iaculis.', 'http://facebook.com/clinica1', '', 'Morales', 'http://sonico999.com.pe', 1),
+(9, 26, '88', '//', '85', '55', '2014-06-21 18:56:53', '2014-06-21 18:57:03', '2014-06-21 18:57:03', '', '', '', '', '', '', '', '', '', 1),
+(10, 27, 'clinica2', 'av. america numero 2', '-6.491356349194494', '-76.35330498196709', '2014-06-21 22:15:54', '2014-06-21 22:25:46', NULL, '', '', 'Tarapoto', '', 'szddddddddddddddddddddzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\r\nzzzzzzzzz<bc<vndbvcm,zxbcm,zxc<bm,bz<mcbz<mcbz<mcbmz<dbcm<bzdmc<bzmcbz<zx,c<b ,zxmbc,zxbnc,zc<n,zxmcnzxcxzc', 'http://facebook.com/clinica1', '', 'Cacatachi', '', 1),
+(11, 28, 'Rinconcito de Manuel', 'av. morales', '-6.493974451710459', '-76.3660383207025', '2014-06-24 05:06:18', '2014-06-24 05:18:14', NULL, '', '', '', '', '', '', '', '', '', 2);
 
 -- --------------------------------------------------------
 
@@ -76,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `detalle_servicios` (
   PRIMARY KEY (`id`),
   KEY `detalle_idservicio_foreign` (`idservicio`),
   KEY `detalle_idclinica_foreign` (`idclinica`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=42 ;
 
 --
 -- Volcado de datos para la tabla `detalle_servicios`
@@ -112,7 +115,9 @@ INSERT INTO `detalle_servicios` (`id`, `idservicio`, `idclinica`, `created_at`, 
 (36, 5, 10, '2014-06-21 22:26:05', '2014-06-21 22:26:05', NULL),
 (37, 6, 10, '2014-06-21 22:26:05', '2014-06-21 22:26:05', NULL),
 (38, 7, 10, '2014-06-21 22:26:05', '2014-06-21 22:26:05', NULL),
-(39, 8, 10, '2014-06-21 22:26:05', '2014-06-21 22:26:05', NULL);
+(39, 8, 10, '2014-06-21 22:26:05', '2014-06-21 22:26:05', NULL),
+(40, 11, 11, '2014-06-24 05:29:12', '2014-06-24 05:29:12', NULL),
+(41, 12, 11, '2014-06-24 05:29:12', '2014-06-24 05:29:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -143,7 +148,10 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_06_15_225318_puliendo_users', 9),
 ('2014_06_16_210448_arreglando_clinicas', 10),
 ('2014_06_16_212602_arreglando_clinicas2', 11),
-('2014_06_17_001242_arreglando_clinicas3', 12);
+('2014_06_17_001242_arreglando_clinicas3', 12),
+('2014_06_23_232303_create_tipos_table', 13),
+('2014_06_23_232543_add_foreign_tipo', 14),
+('2014_06_23_232734_add_foreign_tipo2', 15);
 
 -- --------------------------------------------------------
 
@@ -171,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `modulos` (
 INSERT INTO `modulos` (`id`, `descripcion`, `url`, `icono`, `idpadre`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'PADRE', '#', '', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
 (2, 'Operaciones', '#', 'fa-medkit', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
-(3, 'Clinicas', 'clinicas', 'fa-ambulance', 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
+(3, 'clinicas', 'clinicas', 'fa-ambulance', 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
 (4, 'Servicios', 'servicios', 'fa-stethoscope', 2, '2014-06-01 17:52:53', '2014-06-02 04:40:15', NULL),
 (5, 'Tipo', 'tipos', '', 2, '2014-06-01 17:53:53', '2014-06-01 17:53:53', NULL),
 (20, 'Seguridad', '#', 'fa-bomb', 1, '2014-06-01 18:52:52', '2014-06-01 18:52:52', NULL),
@@ -181,7 +189,7 @@ INSERT INTO `modulos` (`id`, `descripcion`, `url`, `icono`, `idpadre`, `created_
 (24, 'consumir', 'consumir', '', 20, '2014-06-01 20:06:00', '2014-06-01 20:08:10', '2014-06-01 20:08:10'),
 (25, 'dfdfs', 'gdfgdtt', '', 2, '2014-06-03 00:03:13', '2014-06-03 00:03:25', '2014-06-03 00:03:25'),
 (26, 'perfil', 'profile', 'fa-user-md', 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
-(28, 'clinica', 'clinica', 'fa-ambulance', 2, '0000-00-00 00:00:00', '2014-06-17 01:42:01', NULL);
+(28, 'Negocio', 'clinica', 'fa-ambulance', 2, '0000-00-00 00:00:00', '2014-06-17 01:42:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -257,7 +265,7 @@ CREATE TABLE IF NOT EXISTS `servicios` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `servicios`
@@ -273,7 +281,34 @@ INSERT INTO `servicios` (`id`, `descripcion`, `detalle`, `created_at`, `updated_
 (7, 'Laboratorio y Patología Clínica', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
 (8, 'Servicio Materno – Perinatal', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
 (9, 'Emergencias', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
-(10, 'Gimnasio', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL);
+(10, 'Gimnasio', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
+(11, 'Restaurante', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
+(12, 'Hospedaje', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipos`
+--
+
+CREATE TABLE IF NOT EXISTS `tipos` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `icono` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `tipos`
+--
+
+INSERT INTO `tipos` (`id`, `descripcion`, `icono`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Clinica', 'hospital.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
+(2, 'Restaurante', 'restaurant.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL),
+(3, 'Grifo', 'bus.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -306,17 +341,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_username_unique` (`username`),
   KEY `users_idperfil_foreign` (`idperfil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`, `nombres`, `apellidos`, `urlimagen`, `idperfil`, `telefono`, `direccion`, `ciudad`, `distrito`, `web`, `facebook`, `linkedin`, `google`, `twitter`) VALUES
-(1, 'admin', 'pever@unsm.edu.pe', '$2y$10$UsIiHDIy3kuP7aCfRrOdHOBQcr/YPRW1SIdKMy4Lq1OG.AijFQo92', 'V4ONAkgJ8mTkvKiW5SLl09DdJIMCZujBrohDnvRbVHKfhKYNnykFX1zz4eDr', '0000-00-00 00:00:00', '2014-06-21 23:42:29', NULL, 'eveR', 'vásquez', 'ever.gif', 1, '976143808', 'jr. 16 de mayo #741', 'Tarapoto', 'Morales', 'http://sonico.com.pe', 'http://facebook.com/sonico999', 'http://linkedin.com/sonico999', '', '@sonico999'),
+(1, 'admin', 'pever@unsm.edu.pe', '$2y$10$UsIiHDIy3kuP7aCfRrOdHOBQcr/YPRW1SIdKMy4Lq1OG.AijFQo92', 'ptZXiTxJnnWJFGcFdKvbnOWRWhXFohJnnRv1IZUNK5zCpNRnUaucQqyY1sLA', '0000-00-00 00:00:00', '2014-06-24 05:05:36', NULL, 'eveR', 'vásquez', 'ever.gif', 1, '976143808', 'jr. 16 de mayo #741', 'Tarapoto', 'Morales', 'http://sonico.com.pe', 'http://facebook.com/sonico999', 'http://linkedin.com/sonico999', '', '@sonico999'),
 (25, 'avid', 'avid@gmail.com', '$2y$10$ksz8/QFzROIwu9srIQMvX.9/VtwsIvwaFyRo1JRGEXBEJhQD.1pQi', 'UAErqeDSvkdloo95eQlj0TcxNceCBq4JpRNXhB51xKeTRZL7ZgleN3Dsaiv8', '2014-06-16 02:51:48', '2014-06-16 02:53:52', NULL, '', '', '', 2, '', '', '', '', '', '', '', '', ''),
-(26, 'sonico999', 'sonico999@gmail.com', '$2y$10$oX4bRPy0qTKoTta.k8h2CuiFx1NVufEIcim4crOY5XKy2XEyt0F8u', 'rjM5shm8LN5w5bfaTJnZ4XW6EAyJpDjsZvxe9jazr4ttwrwdvJE8Zlprrtz4', '2014-06-16 22:37:28', '2014-06-21 21:51:49', NULL, 'avid', 'Santos', 'camera_icon.png', 2, '976143808', 'av. america', '', '', '', '', '', '', ''),
-(27, 'administrador', 'avid@hotmail.com', '$2y$10$iO.TyJKhKnegpYZwZkW4y.taGa9KKjtoIDl2/IQq5l7RqxAOVfxZ6', 'Q888p2TxMYrezNU6oGnfi8CjOGBoYtb8qhUdjRIQ1xPB6e7VeGSyQSpX6gr0', '2014-06-21 22:15:09', '2014-06-21 22:26:46', NULL, 'Manuel Nieves', 'Avid', 'ever.gif', 2, '', '', '', '', '', '', '', '', '');
+(26, 'sonico999', 'sonico999@gmail.com', '$2y$10$oX4bRPy0qTKoTta.k8h2CuiFx1NVufEIcim4crOY5XKy2XEyt0F8u', 'szfeGjxaeY938tOLcEqTQ9DyFqSNCI79wkVBA4NZ9SRLWJ2F8ILGcVA0Ngz0', '2014-06-16 22:37:28', '2014-06-24 05:41:07', NULL, 'avid', 'Santos', 'usv8pn.jpg', 2, '976143808', 'av. america', '', '', '', '', '', '', ''),
+(27, 'administrador', 'avid@hotmail.com', '$2y$10$iO.TyJKhKnegpYZwZkW4y.taGa9KKjtoIDl2/IQq5l7RqxAOVfxZ6', 'Q888p2TxMYrezNU6oGnfi8CjOGBoYtb8qhUdjRIQ1xPB6e7VeGSyQSpX6gr0', '2014-06-21 22:15:09', '2014-06-21 22:26:46', NULL, 'Manuel Nieves', 'Avid', 'ever.gif', 2, '', '', '', '', '', '', '', '', ''),
+(28, 'manuel', 'manuel@hotmail.com', '$2y$10$KgPbaczi7xqo542itenCtOfAL/fufAEklkGjTsOpAWLw6Jpu/Z7eW', '', '2014-06-24 05:05:56', '2014-06-24 05:06:19', NULL, 'manuel', 'manuel', 'profile-pic.jpg', 2, '', '', '', '', '', '', '', '', '');
 
 --
 -- Restricciones para tablas volcadas
@@ -326,6 +362,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `remember_token`, `c
 -- Filtros para la tabla `clinicas`
 --
 ALTER TABLE `clinicas`
+  ADD CONSTRAINT `clinicas_idtipo_foreign` FOREIGN KEY (`idtipo`) REFERENCES `tipos` (`id`),
   ADD CONSTRAINT `clinicas_iduser_foreign` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`);
 
 --

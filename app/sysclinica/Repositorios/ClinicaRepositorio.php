@@ -155,9 +155,12 @@ class ClinicaRepositorio {
 
         $response = \DB::table('clinicas')
                     ->join('users','clinicas.iduser','=','users.id')
+                    ->join('tipos','clinicas.idtipo','=','tipos.id')
             ->select('clinicas.id','clinicas.descripcion','clinicas.direccion',
-                'clinicas.latitud','clinicas.longitud','clinicas.ciudad','clinicas.distrito','clinicas.razon_social','clinicas.telefono','clinicas.resumen','clinicas.facebook','clinicas.twitter','clinicas.web',
-                'users.nombres','users.apellidos')
+                'clinicas.latitud','clinicas.longitud','clinicas.ciudad','clinicas.distrito',
+                'clinicas.razon_social','clinicas.telefono','clinicas.resumen','clinicas.facebook',
+                'clinicas.twitter','clinicas.web',
+                'users.nombres','users.apellidos','tipos.descripcion as tipo','tipos.id as idtipo','tipos.icono')
             ->get();
 
         return \Response::json(
@@ -166,5 +169,27 @@ class ClinicaRepositorio {
             )
         );
 
+    }
+
+    public function androidSearchClinicas($cadena)
+    {
+        $response = \DB::table('clinicas')
+            ->join('users','clinicas.iduser','=','users.id')
+            ->join('tipos','clinicas.idtipo','=','tipos.id')
+            ->where('clinicas.descripcion','LIKE','%'.$cadena.'%')
+            ->orWhere('tipos.descripcion','LIKE','%'.$cadena.'%')
+            ->whereNull('clinicas.deleted_at')
+            ->select('clinicas.id','clinicas.descripcion','clinicas.direccion',
+                'clinicas.latitud','clinicas.longitud','clinicas.ciudad','clinicas.distrito',
+                'clinicas.razon_social','clinicas.telefono','clinicas.resumen','clinicas.facebook',
+                'clinicas.twitter','clinicas.web',
+                'users.nombres','users.apellidos','tipos.descripcion as tipo','tipos.id as idtipo','tipos.icono')
+            ->get();
+
+        return \Response::json(
+            array(
+                'android' => $response
+            )
+        );
     }
 } 
